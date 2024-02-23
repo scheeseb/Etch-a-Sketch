@@ -1,6 +1,6 @@
 const container = document.querySelector(".container");
 
-function createColumn(quantity){
+function createGrid(quantity){
     for(i = 0; i < quantity; i++){
         const column = document.createElement("div");
         column.className = "column";
@@ -14,16 +14,10 @@ function createColumn(quantity){
     }
 }
 
-function createDiv(quantity){
-    for(i = 0; i < quantity; i++){
-        const div = document.createElement("div");
-        div.className = "gridBox";
-        column.append(div);
-    }
-}
+createGrid(64)
 
-createColumn(16)
 const box = document.querySelectorAll(".gridBox");
+// Add the hover Effect to all boxs
 box.forEach(div => {
     div.addEventListener('mouseover', function() {
       div.style.backgroundColor = "red";
